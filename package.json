@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "description": "sunday_practice",
   "main": "index.js",
-  // "homepage": "https://nikolay-tymoshchuk.github.io/goit-js-hw-11/",
+  "homepage": "https://nikolay-tymoshchuk.github.io/goit-practice-additional/",
   "scripts": {
     "dev": "parcel src/*.html",
-    // "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
+    "build": "parcel build src/*.html --public-url /goit-practice-additional/"
   },
   "repository": {
     "type": "git",
-    // "url": "git+https://github.com/Nikolay-Tymoshchuk/goit-js-hw-11.git"
+    "url": "git+https://github.com/Nikolay-Tymoshchuk/goit-practice-additional.git"
   },
   "author": "Nikolay Tymoshchuk <saintnikfreak@gmal.com>",
   "license": "ISC",
   "bugs": {
-    // "url": "https://github.com/Nikolay-Tymoshchuk/goit-js-hw-11/issues"
+    "url": "https://github.com/Nikolay-Tymoshchuk/goit-practice-additional/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
