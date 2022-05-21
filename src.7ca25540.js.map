@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["arr"],"mappings":";AACA,MAAMA,EAAM","file":"src.7ca25540.js","sourceRoot":"../src","sourcesContent":["// import { Notify } from 'notiflix/build/notiflix-notify-aio';\nconst arr = [];\n"]}
