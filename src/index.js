@@ -7,14 +7,36 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
+const KEY = 'theme';
+
 const refs = {
   menu: document.querySelector('.js-menu'),
   switcher: document.getElementById('theme-switch-toggle')
 }
 
-refs.switcher.addEventListener('change', changeTheme);
-function changeTheme(e) {
-  e.target.checked ? document.body.classList.add(Theme.DARK) : document.body.classList.remove(Theme.DARK)
+refs.menu.insertAdjacentHTML('beforeend', menueTpl(menuData));
+refs.switcher.addEventListener('change', changeThemeAndSetLocalSrorage);
+
+function changeThemeAndSetLocalSrorage(e) {
+  if (e.target.checked) {
+    document.body.classList.remove(Theme.LIGHT);
+    document.body.classList.add(Theme.DARK)
+  } else {
+    document.body.classList.remove(Theme.DARK);
+    document.body.classList.add(Theme.LIGHT)
+  }
+  localStorage.setItem('theme', document.body.className)
 }
 
-refs.menu.insertAdjacentHTML('beforeend', menueTpl(menuData));
+
+const localStorageVerify = () => {
+  if (!localStorage.getItem(KEY) || localStorage.getItem(KEY) === `${Theme.LIGHT}`) {
+    document.body.classList.add(Theme.LIGHT);
+    refs.switcher.checked = false;
+  }
+  else {
+    document.body.classList.add(localStorage.getItem(KEY))  
+    refs.switcher.checked = true;
+  }
+} 
+localStorageVerify();
