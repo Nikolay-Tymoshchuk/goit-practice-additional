@@ -6,10 +6,3 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-const test = document.querySelector('#theme-switch-toggle');
-console.log('object :>> ', test);
-
-test.addEventListener('change', onChange);
-function onChange(e) {
-	
-}
