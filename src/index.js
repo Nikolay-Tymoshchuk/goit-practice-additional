@@ -1,5 +1,5 @@
-import menuData from './js/menu.json';
-const menueTpl = require('./templates/list-render.hbs');
+import menueData from './js/menu.json';
+import menueTpl from './templates/list-render.hbs';
 console.log('menueTpl :>> ', menueTpl);
 
 const Theme = {
@@ -14,7 +14,7 @@ const refs = {
   switcher: document.getElementById('theme-switch-toggle')
 }
 
-refs.menu.insertAdjacentHTML('beforeend', menueTpl(menuData));
+refs.menu.insertAdjacentHTML('beforeend', menueTpl(menueData));
 refs.switcher.addEventListener('change', changeThemeAndSetLocalSrorage);
 
 function changeThemeAndSetLocalSrorage(e) {
