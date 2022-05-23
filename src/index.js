@@ -1,5 +1,5 @@
 import menuData from './js/menu.json';
-import menueTpl from './templates/list-render.hbs';
+const menueTpl = require('./templates/list-render.hbs');
 console.log('menueTpl :>> ', menueTpl);
 
 const Theme = {
